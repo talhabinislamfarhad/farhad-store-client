@@ -34,7 +34,7 @@ const AllProducts = () => {
                         )
 
                     }
-                    history.push('/dashboard/allproducts');
+                    history.push('/dashboard');
                 });
         }
     }
