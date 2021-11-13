@@ -7,7 +7,11 @@ const Review = (props) => {
     return (
         <div>
             <Card className="watchs m-2">
-                <Card.Img className="mx-auto card-img-top w-75 p-3" variant="top" src={img} />
+                <Card.Img
+                    style={{
+                        height: "260px"
+                    }}
+                    className="mx-auto card-img-top w-75 p-3" variant="top" src={img} />
                 <Card.Body>
                     <Card.Title className="card-title text-capitalize">{name}</Card.Title>
                     <Card.Text>
