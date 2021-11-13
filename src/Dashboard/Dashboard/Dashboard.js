@@ -3,7 +3,7 @@ import './Dashboard.css';
 // FontAwesome Icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserCircle, faCartPlus, faCartArrowDown, faComment, faShoppingCart, faList, faHome, faListOl, faSignOutAlt, faUser } from '@fortawesome/free-solid-svg-icons';
-import { Col, Container, Nav, Navbar, Row } from 'react-bootstrap';
+import { Col, Container, Nav, Navbar, Row, Button } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import {
     Switch,
@@ -66,7 +66,7 @@ const Dashboard = () => {
                                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                                 <Navbar.Collapse id="basic-navbar-nav">
                                     <Nav className="navbar flex-column navbar-expand-lg custom_nav-container">
-                                        <Navbar.Brand className="navbar-brand text-warning">FarhadStore</Navbar.Brand>
+                                        <h1>FarhadStore</h1>
                                         <Nav.Link as={NavLink} to={`${url}`}>{User} Profile</Nav.Link>
                                         <Nav.Link as={NavLink} to={`${url}/orders`}>{Order} My Orders</Nav.Link>
                                         <Nav.Link as={NavLink} to={`${url}/review`}>{ReviewIcon} Review</Nav.Link>
@@ -76,7 +76,7 @@ const Dashboard = () => {
                                         <Nav.Link as={NavLink} to={`${url}/allproducts`}>{Products} Manage All Products</Nav.Link>
                                         <Nav.Link as={NavLink} to={`${url}/makeadmin`}>{Admin} Make Admin</Nav.Link>
                                         <Nav.Link as={NavLink} to="/">{Home} Back To Home</Nav.Link>
-                                        <Nav.Link onClick={handleLogout} as={NavLink} to="/">{Logout} Log Out</Nav.Link>
+                                        <Nav.Link className="m-3 p-0" onClick={handleLogout} as={NavLink} to="/"><Button variant="warning"> {Logout} Log Out </Button></Nav.Link>
                                     </Nav>
                                 </Navbar.Collapse>
                             </Container>

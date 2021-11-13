@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import './Registation.css';
 import { Col, Container, FloatingLabel, Form, Row, Button } from 'react-bootstrap';
 import { Link, useHistory, useLocation } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
@@ -86,12 +87,8 @@ const Registation = () => {
                                     <Form.Control onBlur={getPassword} type="password" placeholder="Password" required />
                                 </FloatingLabel>
 
-                                {/* <FloatingLabel controlId="floatingImg" label="Image URL">
-                                    <Form.Control onBlur={getImg} type="text" placeholder="Image URL" />
-                                </FloatingLabel> */}
-
-                                <Button variant="warning" type="submit" className="text-dark mt-4">Sign up</Button><br />
-                                <Link to="/login" className="text-dark mt-4">Alrady a member? Click for Log In</Link>
+                                <Button variant="warning" type="submit" className="text-dark my-4">Sign up</Button><br />
+                                <Link to="/login" className="text-dark my-5">Not a member? Click for <span className="text-dark bg-warning">LOG IN</span> </Link>
                                 <h2 className="mt-2 text-warning">------- OR -------</h2>
                                 <div>
                                     <Button className="mt-2 bg-warning border-0 text-dark" onClick={handleGoogleReg}>{Google}</Button>

@@ -72,7 +72,7 @@ const ManageAllOrders = () => {
                                     <th>Product Name</th>
                                     <th>Name</th>
                                     <th>Order Status</th>
-                                    <th>Role</th>
+                                    <th>Status Button</th>
                                     <th>Cancel Order</th>
                                 </tr>
                             </thead>

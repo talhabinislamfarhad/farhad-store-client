@@ -50,7 +50,7 @@ const Header = () => {
                             <Nav.Link as={NavLink} to="/">Home</Nav.Link>
                             <Nav.Link as={NavLink} to="/about">About</Nav.Link>
                             <Nav.Link as={NavLink} to="/watchs">Watchs</Nav.Link>
-                            {!user?.displayName ? (<Nav.Link as={NavLink} to="/login">
+                            {!user?.displayName ? (<Nav.Link className="m-2 p-0" as={NavLink} to="/login">
                                 <Button variant="outline-warning" className="text-dark">Log In</Button>
                             </Nav.Link>)
                                 :

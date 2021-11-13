@@ -10,3 +10,8 @@
 a{
     text-decoration: none;
 }
+
+span{
+    border-radius: 10px;
+    padding: 10px;
+}
