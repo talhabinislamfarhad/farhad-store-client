@@ -1,0 +1,49 @@
+/* feature section */
+
+.feature_section {
+  text-align: center;
+}
+.heading_container {
+    align-items: center;
+}
+
+.box {
+    margin-top: 45px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px 0 rgb(0 0 0 / 25%), -2px -2px 3px 0 rgb(0 0 0 / 5%);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.2s;
+}
+.box:hover {
+    background-color: #3b4a6b;
+    color: #ffffff;
+}
+.box .img-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    transition: all 0.2s;
+    margin: 15px 0;
+}
+    
+.box  img {
+    width: 75px;
+    transition: all 0.2s;
+    }
+    .box:hover img {
+    -webkit-filter: invert(1);
+    filter: invert(1);
+}
+
+.detail-box {
+    margin-top: 15px;
+}
+.detail-box h5 {
+    font-weight: bold;
+    position: relative;
+}
+
+/* end feature section */

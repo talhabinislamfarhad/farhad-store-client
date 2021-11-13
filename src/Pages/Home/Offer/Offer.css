@@ -1,0 +1,36 @@
+.free-version-banner {
+    position: relative;
+    background: #333;
+    text-align: center;
+    background-color: #E6C511;
+  }
+  
+  .free-version-banner .section-title span {
+    font-weight: 500;
+    text-transform: capitalize;
+  }
+  
+  .free-version-banner .section-title {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  
+  .free-version-banner .section-title h2 {
+    padding-bottom: 15px;
+  }
+  
+  .free-version-banner .section-title h2::before {
+    background-color: #fff;
+  }
+  
+  .free-version-banner .button {
+    z-index: 5;
+    margin-top: 40px;
+  }
+  
+  .free-version-banner .button .btn {
+    background-color: #3b4a6b;
+    color: #fff;
+    text-transform:capitalize;
+  }

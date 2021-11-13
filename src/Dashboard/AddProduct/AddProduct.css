@@ -1,0 +1,21 @@
+ .row h3{
+    color:var(--black);
+    padding-bottom: 1rem;
+    font-size: 3rem;
+    text-align: center;
+}
+ .row form{
+    flex:1 1 45rem;
+    text-align: center;
+    padding: 2rem;
+    border-radius: .5rem;
+}
+
+ .row form input{
+    padding: 10px 10px !important;
+}
+
+ .row form label{
+    color:var(--black);
+    padding-bottom: 1rem;
+}

@@ -1,0 +1,76 @@
+/* banner section */
+.row {
+  --bs-gutter-x: 0;
+}
+.banner_section {
+    height: 560px;
+    width: 100%;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 45px 0;
+    background-color: #f0d43a;
+    border-radius: 0 0 0 250px;
+    background: #3b4a6b;
+  }
+  
+  .banner_section .row {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  
+  .banner_section #banner {
+    width: 100%;
+    position: unset;
+  }
+  
+  .banner_section .detail-box {
+    color: #ffffff;
+    margin: 20px;
+  }
+  
+  .banner_section .detail-box h1 {
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .banner_section .detail-box .btn-box {
+    justify-content: center;
+    display: flex;
+    margin: 0 -5px;
+    margin-top: 15px;
+  }
+  
+  .banner_section .detail-box .btn-box a {
+    margin: 5px;
+    text-align: center;
+    width: 185px;
+  }
+  
+  .banner_section .detail-box .btn-box .btn1 {
+    display: inline-block;
+    padding: 12px 15px;
+    background-color: #e6c511;
+    color: #000;
+    border-radius: 5px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    border: 1px solid #e6c511;
+  }
+  
+  .banner_section .detail-box .btn-box .btn1:hover {
+    color: #ffffff;
+  }
+  
+  .banner_section .img-box img {
+    width: 100%;
+  }
+  
+
+  @media (max-width: 768px) {
+    .banner_section .detail-box {
+        margin-bottom: 45px;
+      }
+  }

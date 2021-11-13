@@ -1,0 +1,22 @@
+/*-- services --*/
+
+.services-grids:nth-child(odd) {
+    background: #D8E9FA;
+}
+
+.services-grids {
+    background: #BED0E9;
+    text-align: center;
+}
+
+.services-grids span{
+    font-size: 40px;
+}
+
+.services-grids h4 {
+    font-size: 1.5em;
+    color: #000;
+    line-height: 1.5em;
+    font-weight: 600;
+    text-transform: capitalize;
+}
