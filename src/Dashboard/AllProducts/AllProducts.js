@@ -12,14 +12,14 @@ const AllProducts = () => {
     const [allProducts, setAllProducts] = useState([]);
     console.log(allProducts);
     useEffect(() => {
-        fetch("http://localhost:5000/allproducts")
+        fetch("https://secure-coast-01633.herokuapp.com/allproducts")
             .then((res) => res.json())
             .then((data) => setAllProducts(data));
     }, [user]);
     const handleProductDelete = (id) => {
         const proced = window.confirm('Are you Sure, Delete Your Data?');
         if (proced) {
-            const url = `http://localhost:5000/deleteallproduct/${id}`;
+            const url = `https://secure-coast-01633.herokuapp.com/deleteallproduct/${id}`;
 
             fetch(url, {
                 method: 'DELETE'

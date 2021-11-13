@@ -5,13 +5,13 @@ import Swal from 'sweetalert2';
 
 const MakeAdmin = () => {
     const handleUpdate = (id) => {
-        const url = `http://localhost:5000/users/${id}`;
+        const url = `https://secure-coast-01633.herokuapp.com/users/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify(manageOrder)
+            body: JSON.stringify(allUser)
         })
             .then(res => res.json())
             .then(data => {
@@ -25,16 +25,16 @@ const MakeAdmin = () => {
             })
     }
     // const {user} = useAuth();
-    const [manageOrder, setManageOrder] = useState([]);
+    const [allUser, setAlluser] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/users')
+        fetch('https://secure-coast-01633.herokuapp.com/users')
             .then((res) => res.json())
-            .then((data) => setManageOrder(data));
+            .then((data) => setAlluser(data));
     });
     return (
         <>
             <div className="container manage-orders">
-                <h1 className="text-center text-light py-3">Make Admin</h1>
+                <h1 className="text-center text-dark py-3">Make Admin</h1>
             </div>
             <Container className="py-5">
                 <Row xs={12} md={12} className="g-4 mx-auto">
@@ -51,18 +51,18 @@ const MakeAdmin = () => {
                             </thead>
                             <tbody>
                                 {
-                                    manageOrder.map(myorder => {
+                                    allUser.map(user => {
                                         return (
-                                            <tr key={myorder._id}>
+                                            <tr key={user._id}>
                                                 {/* <td><Image style= {{height: '50px', width: '80px'}} src={user?.photoURL} fluid /></td> */}
-                                                <td>{myorder?.displayName}</td>
-                                                <td>{myorder?.email}</td>
-                                                <td>{myorder?.role === 'admin' ? (<h6 className="text-success fw-bolder">
-                                                    {myorder?.role}
+                                                <td>{user?.displayName}</td>
+                                                <td>{user?.email}</td>
+                                                <td>{user?.role === 'admin' ? (<h6 className="text-success fw-bolder">
+                                                    {user?.role}
                                                 </h6>) : (<h6 className="text-danger fw-bolder">
-                                                    {myorder?.role}{"basic"}
+                                                    {user?.role}{"basic"}
                                                 </h6>)}</td>
-                                                <td><Button onClick={() => handleUpdate(myorder._id)} variant="outline-info">Make Admin</Button></td>
+                                                <td><Button onClick={() => handleUpdate(user._id)} variant="warning">Make Admin</Button></td>
                                             </tr>
                                         )
                                     })

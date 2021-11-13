@@ -9,7 +9,7 @@ const AddProduct = () => {
     const history = useHistory();
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
-        fetch('http://localhost:5000/watchs', {
+        fetch('https://secure-coast-01633.herokuapp.com/watchs', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

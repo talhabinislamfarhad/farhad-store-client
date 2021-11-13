@@ -10,7 +10,6 @@ import Footer from '../../Shared/Footer/Footer';
 import { Card, Col, Container, Row, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import UseWatchs from '../../../hooks/UseWatchs';
-import Reviews from '../Reviews/Reviews';
 
 const Home = () => {
     const [watchs] = UseWatchs();
@@ -25,7 +24,7 @@ const Home = () => {
                 <Container fluid>
                     <h1 className="mt-5">LATEST PRODUCTS</h1>
                     <Row xs={1} md={3} className="g-4 my-3">
-                        {watchs.map(watchs => {
+                        {watchs.slice(0, 6).map(watchs => {
                             return (
                                 <Col>
                                     <div key={watchs._id}>

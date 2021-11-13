@@ -12,7 +12,7 @@ const Brand = () => {
         <div>
             {/* <!-- about --> */}
             <Row className="pb-5 mt-5">
-                <Col sm={4}>
+                <Col sm={4} className="my-4">
                     <div className="hovereffect">
                         <img className="img-fluid" src={BrandOne} alt="" />
                         <div className="overlay">
@@ -21,7 +21,7 @@ const Brand = () => {
                         </div>
                     </div>
                 </Col>
-                <Col sm={4}>
+                <Col sm={4} className="my-4">
                     <div className="hovereffect">
                         <img className="img-fluid" src={BrandTwo} alt="" />
                         <div className="overlay">
@@ -30,7 +30,7 @@ const Brand = () => {
                         </div>
                     </div>
                 </Col>
-                <Col sm={4}>
+                <Col sm={4} className="my-4">
                     <div className="hovereffect">
                         <img className="img-fluid" src={BrandThree} alt="" />
                         <div className="overlay">

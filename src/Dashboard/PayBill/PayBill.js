@@ -9,7 +9,7 @@ const PayBill = () => {
             <Container>
                 <Row>
                     <Col className="mx-auto mt-5" md={6}>
-                        <h3>Add Review!</h3>
+                        <h3>Comming Soon</h3>
                         <img
                             src={payImg}
                             width="100%"
