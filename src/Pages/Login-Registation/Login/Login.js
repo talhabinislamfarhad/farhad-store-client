@@ -13,8 +13,8 @@ import Footer from '../../Shared/Footer/Footer';
 const Login = () => {
     const history = useHistory();
     const location = useLocation();
-    const emailRedirect = location?.state?.from || "/";
-    const googleRedirect = location?.state?.from || "/";
+    const emailRedirect = location?.state?.from || "/dashboard";
+    const googleRedirect = location?.state?.from || "/dashboard";
     const { getEmail, getPassword, signInWithEmail, setUser, signinGoogle, setIsLoading, saveUser } = useAuth();
     const login = (e) => {
         e.preventDefault()

@@ -14,8 +14,8 @@ const Registation = () => {
     const { signinGoogle, getName, singUp, getEmail, getPassword, setDisplayName, setIsLoading, saveUser } = useAuth();
     const history = useHistory();
     const location = useLocation();
-    const redirect = location?.state?.from || "/";
-    const googleRedirect = location?.state?.from || "/";
+    const redirect = location?.state?.from || "/dashboard";
+    const googleRedirect = location?.state?.from || "/dashboard";
     const register = (e) => {
         e.preventDefault();
         singUp()

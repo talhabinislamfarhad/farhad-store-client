@@ -85,7 +85,7 @@ const ManageAllOrders = () => {
                                             <td>{displayName}</td>
                                             <td>{allorders.status}</td>
                                             <td><Button variant="info" onClick={() => handleUpdate(allorders._id)} className="btn">Approve</Button></td>
-                                            <td><Button variant="warning" onClick={() => handleDelete(allorders._id)} className="btn">Delete Package</Button></td>
+                                            <td><Button variant="warning" onClick={() => handleDelete(allorders._id)} className="btn">Delete Product</Button></td>
                                         </tr>
                                     )
                                 })}

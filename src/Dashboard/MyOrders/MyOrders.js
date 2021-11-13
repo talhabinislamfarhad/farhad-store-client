@@ -32,7 +32,7 @@ const MyOrders = () => {
                             "success"
                         )
                     }
-                    history.push('/');
+                    history.push('/dashboard');
                 });
         }
     }

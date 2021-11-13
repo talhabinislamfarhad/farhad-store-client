@@ -8,7 +8,7 @@
 
 ## Described the project below with some bullet points
 * The website made by React, firebase, react-router, etc.
-* In this website has a proper login/Registation page.
+* In this website has a proper login/Registation page. This Website has 2 type of admin panel one for customer & other one for Admin.
 * In this website has Watchs page you can order Watch by the website.
 * In this website firstly you can not see Dashboard page. After login you can see Dashboard page. In Dashboard you can see your Orders, Your Profile, Back Home & Logout.
 * When you have done your login you can see a icon of user on the header and your name & logout option in the dropdown of your name.
