@@ -20,6 +20,7 @@ import useAuth from '../../hooks/useAuth';
 import MakeAdmin from '../MakeAdmin/MakeAdmin';
 import Review from '../Rewiew/Review';
 import PayBill from '../PayBill/PayBill';
+import AdminRoute from '../AdminRoute/AdminRoute';
 
 const Dashboard = () => {
     let { path, url } = useRouteMatch();
@@ -32,9 +33,9 @@ const Dashboard = () => {
     const Products = <FontAwesomeIcon icon={faListOl} />
     const Home = <FontAwesomeIcon icon={faHome} />
     const Logout = <FontAwesomeIcon icon={faSignOutAlt} />
-    const Admin = <FontAwesomeIcon icon={faUser} />
+    const AdminIcon = <FontAwesomeIcon icon={faUser} />
 
-    const { logOut, setUser, setIsLoading } = useAuth();
+    const { logOut, setUser, setIsLoading, admin } = useAuth();
     const handleLogout = () => {
         logOut()
             .then((result) => {
@@ -68,15 +69,23 @@ const Dashboard = () => {
                                     <Nav className="navbar flex-column navbar-expand-lg custom_nav-container">
                                         <h1>FarhadStore</h1>
                                         <Nav.Link as={NavLink} to={`${url}`}>{User} Profile</Nav.Link>
-                                        <Nav.Link as={NavLink} to={`${url}/orders`}>{Order} My Orders</Nav.Link>
-                                        <Nav.Link as={NavLink} to={`${url}/review`}>{ReviewIcon} Review</Nav.Link>
-                                        <Nav.Link as={NavLink} to={`${url}/paybill`}>{PayIcon} Pay Bills</Nav.Link>
-                                        <Nav.Link as={NavLink} to={`${url}/addproduct`}>{Add} Add Product</Nav.Link>
-                                        <Nav.Link as={NavLink} to={`${url}/allorders`}>{AllOrders} Manage All Orders</Nav.Link>
-                                        <Nav.Link as={NavLink} to={`${url}/allproducts`}>{Products} Manage All Products</Nav.Link>
-                                        <Nav.Link as={NavLink} to={`${url}/makeadmin`}>{Admin} Make Admin</Nav.Link>
+                                        {
+                                            !admin && <>
+                                                <Nav.Link as={NavLink} to={`${url}/orders`}>{Order} My Orders</Nav.Link>
+                                                <Nav.Link as={NavLink} to={`${url}/review`}>{ReviewIcon} Review</Nav.Link>
+                                                <Nav.Link as={NavLink} to={`${url}/paybill`}>{PayIcon} Pay Bills</Nav.Link>
+                                            </>
+                                        }
+                                        {
+                                            admin && <>
+                                                <Nav.Link as={NavLink} to={`${url}/addproduct`}>{Add} Add Product</Nav.Link>
+                                                <Nav.Link as={NavLink} to={`${url}/allorders`}>{AllOrders} Manage All Orders</Nav.Link>
+                                                <Nav.Link as={NavLink} to={`${url}/allproducts`}>{Products} Manage All Products</Nav.Link>
+                                                <Nav.Link as={NavLink} to={`${url}/makeadmin`}>{AdminIcon} Make Admin</Nav.Link>
+                                            </>
+                                        }
                                         <Nav.Link as={NavLink} to="/">{Home} Back To Home</Nav.Link>
-                                        <Nav.Link className="m-3 p-0" onClick={handleLogout} as={NavLink} to="/"><Button variant="warning"> {Logout} Log Out </Button></Nav.Link>
+                                        <Nav.Link className="m-3 p-0" onClick={handleLogout} ><Button variant="warning"> {Logout} Log Out </Button></Nav.Link>
                                     </Nav>
                                 </Navbar.Collapse>
                             </Container>
@@ -96,18 +105,18 @@ const Dashboard = () => {
                             <Route path={`${path}/paybill`}>
                                 <PayBill></PayBill>
                             </Route>
-                            <Route path={`${path}/addproduct`}>
+                            <AdminRoute path={`${path}/addproduct`}>
                                 <AddProduct></AddProduct>
-                            </Route>
-                            <Route path={`${path}/allorders`}>
+                            </AdminRoute>
+                            <AdminRoute path={`${path}/allorders`}>
                                 <ManageAllOrders></ManageAllOrders>
-                            </Route>
-                            <Route path={`${path}/allproducts`}>
+                            </AdminRoute>
+                            <AdminRoute path={`${path}/allproducts`}>
                                 <AllProducts></AllProducts>
-                            </Route>
-                            <Route path={`${path}/makeadmin`}>
+                            </AdminRoute>
+                            <AdminRoute path={`${path}/makeadmin`}>
                                 <MakeAdmin></MakeAdmin>
-                            </Route>
+                            </AdminRoute>
                         </Switch>
                     </Col>
                 </Row>

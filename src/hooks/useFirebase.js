@@ -12,6 +12,7 @@ const UseFirebase = () => {
     const [email, setEmail] = useState("");
     const [name, setName] = useState("");
     const [password, setPassword] = useState("");
+    const [admin, setAdmin] = useState(false);
     const [isLoading, setIsLoading] = useState(true);
     // get name
     function getName(e) {
@@ -26,8 +27,11 @@ const UseFirebase = () => {
     function getPassword(e) {
         setPassword(e?.target?.value);
     }
+    //
+
     // sign up with email password
     function singUp() {
+        saveUser(email, name, 'PUT')
         setIsLoading(true)
         return createUserWithEmailAndPassword(auth, email, password);
     }
@@ -72,7 +76,23 @@ const UseFirebase = () => {
         });
         return () => unsubscribe;
     }, []);
-
+    // check admin 
+    useEffect(() => {
+        fetch(`http://localhost:5000/users/${user?.email}`)
+            .then(res => res.json())
+            .then(data => setAdmin(data.admin))
+    }, [user?.email])
+    const saveUser = (email, displayName, method) => {
+        const user = { email, displayName }
+        fetch('http://localhost:5000/users', {
+            method: method,
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(user)
+        })
+            .then()
+    }
     // sign out
     function logOut() {
         setIsLoading(true)
@@ -84,13 +104,15 @@ const UseFirebase = () => {
         signinGoogle,
         user,
         setUser,
+        saveUser,
         getPassword,
         getEmail,
         singUp,
         getName,
         isLoading,
         setDisplayName,
-        setIsLoading
+        setIsLoading,
+        admin
     }
 }
 export default UseFirebase;

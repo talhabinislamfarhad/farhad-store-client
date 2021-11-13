@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './Registation.css';
 import { Col, Container, FloatingLabel, Form, Row, Button } from 'react-bootstrap';
 import { Link, useHistory, useLocation } from 'react-router-dom';
@@ -11,10 +11,7 @@ import Header from '../../Shared/Header/Header';
 import Footer from '../../Shared/Footer/Footer';
 
 const Registation = () => {
-    useEffect(() => {
-        document.title = 'Register : Your Best Watch Shop'
-    }, []);
-    const { signinGoogle, getName, singUp, getEmail, getPassword, setDisplayName, setIsLoading } = useAuth();
+    const { signinGoogle, getName, singUp, getEmail, getPassword, setDisplayName, setIsLoading, saveUser } = useAuth();
     const history = useHistory();
     const location = useLocation();
     const redirect = location?.state?.from || "/";
@@ -45,7 +42,7 @@ const Registation = () => {
     const handleGoogleReg = () => {
         signinGoogle()
             .then(result => {
-                console.log(result)
+                saveUser(result.user.email, result.user.displayName, 'PUT')
                 Swal.fire("Good job!",
                     "Registation SuccessFull!",
                     "success"

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './Login.css'
 import { Col, Container, FloatingLabel, Form, Row, Button } from 'react-bootstrap';
 import { Link, useHistory, useLocation } from 'react-router-dom';
@@ -11,14 +11,11 @@ import Header from '../../Shared/Header/Header';
 import Footer from '../../Shared/Footer/Footer';
 
 const Login = () => {
-    useEffect(() => {
-        document.title = 'Login : Your Best Watch Shop'
-    }, []);
     const history = useHistory();
     const location = useLocation();
     const emailRedirect = location?.state?.from || "/";
     const googleRedirect = location?.state?.from || "/";
-    const { getEmail, getPassword, signInWithEmail, setUser, signinGoogle, setIsLoading } = useAuth();
+    const { getEmail, getPassword, signInWithEmail, setUser, signinGoogle, setIsLoading, saveUser } = useAuth();
     const login = (e) => {
         e.preventDefault()
         signInWithEmail()
@@ -43,6 +40,7 @@ const Login = () => {
     const handleGoogleLogin = () => {
         signinGoogle()
             .then(result => {
+                saveUser(result.user.email, result.user.displayName, 'PUT')
                 console.log(result)
                 Swal.fire("Good job!",
                     "Log In SuccessFull!",
