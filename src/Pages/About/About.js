@@ -30,18 +30,12 @@ const About = () => {
                                     </h2>
                                 </div>
                                 <p>
-                                    There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
-                                    in some form, by injected humour, or randomised words which don't look even slightly believable. If you
-                                    are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in
-                                    the middle of text. All
+                                    Welcome to FarhadStore! We are the online watch store that you have been looking for. Our goal and mission here at FarhadStore is to help you find and own the perfect luxury watch. Have you been thinking of purchasing a Rolex, Omega, Tag Heuer or Seiko?
                                 </p>
                                 <p>
-                                    There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
-                                    in some form, by injected humour, or randomised words which don't look even slightly believable. If you
-                                    are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in
-                                    the middle of text. All
+                                    Whether it will be your very first luxury watch or you’re adding to your elite collection - we offer 100% authentic luxury watches at unbelievably discounted rates. Between our prices and our authenticity guarantee, we believe that we are the best online watch store around.
                                 </p>
-                                <Link to="/about">Read More</Link>
+                                <Link to="/watchs">Shop Now</Link>
                             </div>
                         </Col>
                     </Row>

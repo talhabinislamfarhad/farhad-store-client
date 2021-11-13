@@ -72,6 +72,7 @@ const ManageAllOrders = () => {
                                     <th>Product Name</th>
                                     <th>Name</th>
                                     <th>Order Status</th>
+                                    <th>Role</th>
                                     <th>Cancel Order</th>
                                 </tr>
                             </thead>
@@ -82,6 +83,7 @@ const ManageAllOrders = () => {
                                             <td className="productImg"><img src={allorders?.confirm?.img} alt="" /></td>
                                             <td>{allorders?.confirm?.title}</td>
                                             <td>{displayName}</td>
+                                            <td>{allorders.status}</td>
                                             <td><Button variant="info" onClick={() => handleUpdate(allorders._id)} className="btn">Approve</Button></td>
                                             <td><Button variant="warning" onClick={() => handleDelete(allorders._id)} className="btn">Delete Package</Button></td>
                                         </tr>

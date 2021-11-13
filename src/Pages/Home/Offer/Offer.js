@@ -14,9 +14,9 @@ const Offer = () => {
                     <Row className="align-items-center" md={8} xs={12}>
                         <div className="section-title mb-60">
                             <span className="text-dark wow fadeInDown" data-wow-delay=".2s" >FarhadStore</span>
-                            <h2 className="text-dark wow fadeInUp" data-wow-delay=".4s" >Get 50% Off <br />In All Smart Watch</h2>
-                            <Button variant="warming" className="button">
-                                <Link as={NavLink} to="/watchs" className="btn wow fadeInUp">Purchase Now</Link>
+                            <h2 className="text-dark wow fadeInUp" data-wow-delay=".4s" >GET 50% OFF <br />IN ALL SMART WATCH</h2>
+                            <Button variant="danger" className="button">
+                                <Link as={NavLink} to="/watchs" className="text-light wow fadeInUp">Purchase Now</Link>
                             </Button>
                         </div>
                     </Row>

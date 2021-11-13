@@ -32,7 +32,7 @@ const AddProduct = () => {
             <Container>
                 <Row>
                     <Col className="mx-auto mt-5" md={6}>
-                        <h3>Add package!</h3>
+                        <h3>Add Product!</h3>
                         <Card>
                             <Card.Body>
                                 <Form onSubmit={handleSubmit(onSubmit)}>

@@ -24,7 +24,7 @@ const Footer = () => {
                                     FarhadStore
                                 </h4>
                                 <p>
-                                    Necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with
+                                    Welcome to farhadStore! This online watch store that you have been looking for. Our goal and mission to help you find and own the perfect watch.
                                 </p>
                             </div>
                         </Col>

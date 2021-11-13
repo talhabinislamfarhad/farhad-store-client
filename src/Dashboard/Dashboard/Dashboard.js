@@ -2,7 +2,7 @@ import React from 'react';
 import './Dashboard.css';
 // FontAwesome Icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUserCircle, faCartPlus, faCartArrowDown, faList, faHome, faListOl, faSignOutAlt, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faUserCircle, faCartPlus, faCartArrowDown, faComment, faShoppingCart, faList, faHome, faListOl, faSignOutAlt, faUser } from '@fortawesome/free-solid-svg-icons';
 import { Col, Container, Nav, Navbar, Row } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import {
@@ -18,11 +18,15 @@ import AllProducts from '../AllProducts/AllProducts';
 import Swal from 'sweetalert2';
 import useAuth from '../../hooks/useAuth';
 import MakeAdmin from '../MakeAdmin/MakeAdmin';
+import Review from '../Rewiew/Review';
+import PayBill from '../PayBill/PayBill';
 
 const Dashboard = () => {
     let { path, url } = useRouteMatch();
     const User = <FontAwesomeIcon icon={faUserCircle} />
     const Order = <FontAwesomeIcon icon={faCartArrowDown} />
+    const ReviewIcon = <FontAwesomeIcon icon={faComment} />
+    const PayIcon = <FontAwesomeIcon icon={faShoppingCart} />
     const Add = <FontAwesomeIcon icon={faCartPlus} />
     const AllOrders = <FontAwesomeIcon icon={faList} />
     const Products = <FontAwesomeIcon icon={faListOl} />
@@ -65,6 +69,8 @@ const Dashboard = () => {
                                         <Navbar.Brand className="navbar-brand text-warning">FarhadStore</Navbar.Brand>
                                         <Nav.Link as={NavLink} to={`${url}`}>{User} Profile</Nav.Link>
                                         <Nav.Link as={NavLink} to={`${url}/orders`}>{Order} My Orders</Nav.Link>
+                                        <Nav.Link as={NavLink} to={`${url}/review`}>{ReviewIcon} Review</Nav.Link>
+                                        <Nav.Link as={NavLink} to={`${url}/paybill`}>{PayIcon} Pay Bills</Nav.Link>
                                         <Nav.Link as={NavLink} to={`${url}/addproduct`}>{Add} Add Product</Nav.Link>
                                         <Nav.Link as={NavLink} to={`${url}/allorders`}>{AllOrders} Manage All Orders</Nav.Link>
                                         <Nav.Link as={NavLink} to={`${url}/allproducts`}>{Products} Manage All Products</Nav.Link>
@@ -83,6 +89,12 @@ const Dashboard = () => {
                             </Route>
                             <Route path={`${path}/orders`}>
                                 <MyOrders></MyOrders>
+                            </Route>
+                            <Route path={`${path}/review`}>
+                                <Review></Review>
+                            </Route>
+                            <Route path={`${path}/paybill`}>
+                                <PayBill></PayBill>
                             </Route>
                             <Route path={`${path}/addproduct`}>
                                 <AddProduct></AddProduct>

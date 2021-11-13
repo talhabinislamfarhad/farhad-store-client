@@ -10,6 +10,7 @@ import Footer from '../../Shared/Footer/Footer';
 import { Card, Col, Container, Row, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import UseWatchs from '../../../hooks/UseWatchs';
+import Reviews from '../Reviews/Reviews';
 
 const Home = () => {
     const [watchs] = UseWatchs();

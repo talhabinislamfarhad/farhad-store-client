@@ -19,7 +19,7 @@ const Banner = () => {
                                         Smart Watches
                                     </h1>
                                     <p>
-                                        Aenean scelerisque felis ut orci condimentum laoreet. Integer nisi nisl, convallis et augue sit amet, lobortis semper quam.
+                                        Trusted results for Ecommerce Website Uk. Check Visymo Search for the best results! Unlimited Access. 100% Secure.
                                     </p>
                                     <div className="btn-box">
                                         <Link to="/watchs" className="btn1"> Our Watchs </Link>

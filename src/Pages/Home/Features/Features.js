@@ -15,7 +15,7 @@ const Features = () => {
             <section className="feature_section my-5">
                 <Container>
                     <div className="heading_container">
-                        <h2> Features Of Our Watches</h2>
+                        <h2 className="my-5"> Features Of Our Watches</h2>
                     </div>
                     <Row>
                         <Col lg={3} sm={6}>
@@ -28,7 +28,7 @@ const Features = () => {
                                         Fitness Tracking
                                     </h5>
                                     <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                        A wrist-worn device that can detect some combination of walking steps, running distance, heart rate, sleep patterns and swimming laps.
                                     </p>
                                 </div>
                             </div>
@@ -43,7 +43,7 @@ const Features = () => {
                                         Alerts & Notifications
                                     </h5>
                                     <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                        Alert messaging (or alert notification) is machine-to-person communication that is important or time sensitive. An alert may in calendar.
                                     </p>
                                 </div>
                             </div>
@@ -58,7 +58,7 @@ const Features = () => {
                                         Messages
                                     </h5>
                                     <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                        The definition of a message is a short communication sent from one person to another or the central theme or idea of a communication.
                                     </p>
                                 </div>
                             </div>
@@ -73,7 +73,7 @@ const Features = () => {
                                         Bluetooth
                                     </h5>
                                     <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                        Bluetooth is a short-range wireless technology standard that is used for exchanging data between fixed mobile devices short distances.
                                     </p>
                                 </div>
                             </div>

@@ -40,7 +40,7 @@ const MyOrders = () => {
     return (
         <div>
             <Container fluid>
-                <h1 className="mt-5">YOUR ORDERS</h1>
+                <h1 className="mt-5">MY ORDERS</h1>
                 <Row xs={1} md={3} className="g-4 my-3">
                     {myOrders.map(orders => {
                         return (
