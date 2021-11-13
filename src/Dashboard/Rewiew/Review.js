@@ -6,7 +6,7 @@ import Swal from 'sweetalert2';
 const Review = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = (data) => {
-        fetch('http://localhost:5000/review', {
+        fetch('https://secure-coast-01633.herokuapp.com/review', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
