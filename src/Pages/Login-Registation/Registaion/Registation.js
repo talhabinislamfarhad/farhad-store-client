@@ -9,6 +9,8 @@ import { faGoogle } from '@fortawesome/free-brands-svg-icons';
 import Swal from 'sweetalert2';
 import Header from '../../Shared/Header/Header';
 import Footer from '../../Shared/Footer/Footer';
+// Image
+import bg from '../../../Images/bg.jpg';
 
 const Registation = () => {
     const { signinGoogle, getName, singUp, getEmail, getPassword, setDisplayName, setIsLoading, saveUser } = useAuth();
@@ -66,8 +68,14 @@ const Registation = () => {
             <div>
                 <Header></Header>
             </div>
-            <div className="registation my-5">
-                <h1 className="mt-5 text-warning">Registation</h1>
+            <div className="registation py-5"
+                style={{
+                    background: `url(${bg})`,
+                    backgroundRepeat: 'no-repeat',
+                    backgroundSize: 'cover'
+                }}
+            >
+                <h1 className="mt-5 text-warning">REGISTATION</h1>
                 <Container>
                     <Row className="justify-content-center mt-5">
                         <Col xs={10} md={6}>
@@ -85,7 +93,7 @@ const Registation = () => {
                                 </FloatingLabel>
 
                                 <Button variant="warning" type="submit" className="text-dark my-4">Sign up</Button><br />
-                                <Link to="/login" className="text-dark my-5">Not a member? Click for <span className="text-dark bg-warning">LOG IN</span> </Link>
+                                <Link to="/login" className="text-warning my-5">Not a member? Click Here for LOG IN</Link>
                                 <h2 className="mt-2 text-warning">------- OR -------</h2>
                                 <div>
                                     <Button className="mt-2 bg-warning border-0 text-dark" onClick={handleGoogleReg}>{Google}</Button>

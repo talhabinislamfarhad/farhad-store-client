@@ -9,6 +9,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGoogle } from '@fortawesome/free-brands-svg-icons';
 import Header from '../../Shared/Header/Header';
 import Footer from '../../Shared/Footer/Footer';
+// Image
+import bg from '../../../Images/bg.jpg';
 
 const Login = () => {
     const history = useHistory();
@@ -65,7 +67,13 @@ const Login = () => {
             <div>
                 <Header></Header>
             </div>
-            <div className="login my-5">
+            <div className="login py-5"
+                style={{
+                    background: `url(${bg})`,
+                    backgroundRepeat: 'no-repeat',
+                    backgroundSize: 'cover'
+                }}
+            >
                 <h1 className="mt-5 text-warning">LOG IN</h1>
                 <Container>
                     <Row className="justify-content-center mt-5">
@@ -82,7 +90,7 @@ const Login = () => {
                                     <Form.Control onBlur={getPassword} type="password" placeholder="Password" required />
                                 </FloatingLabel>
                                 <Button type="submit" variant="warning" className="text-dark my-4">Log In</Button><br />
-                                <Link to="/registation" className="text-dark my-5">Not a member? Click for <span className="text-dark bg-warning">SING UP</span></Link>
+                                <Link to="/registation" className="text-warning my-5">Not a member? Click Here for SING UP</Link>
                                 <h2 className="mt-2 text-warning">------- OR -------</h2>
                                 <div>
                                     <Button className="mt-2 bg-warning border-0 text-dark" onClick={handleGoogleLogin}>{Google}</Button>

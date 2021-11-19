@@ -16,7 +16,7 @@ const Review = (props) => {
                     <Card.Title className="card-title text-capitalize">{name}</Card.Title>
                     <Card.Text>
                         <div className="card-body py-3 px-2">
-                            <p className="card-title">{dsc}</p>
+                            <p className="card-title">{dsc.slice(0, 30)}</p>
                             <Rating rate={rate}></Rating>
                         </div>
                     </Card.Text>

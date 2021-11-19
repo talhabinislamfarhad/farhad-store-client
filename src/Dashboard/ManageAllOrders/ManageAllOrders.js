@@ -65,7 +65,7 @@ const ManageAllOrders = () => {
 
                 <div className="box-container">
                     <Col>
-                        <Table striped bordered hover>
+                        <Table striped bordered hover responsive>
                             <thead>
                                 <tr>
                                     <th>Image</th>
