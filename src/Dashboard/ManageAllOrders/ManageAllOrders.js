@@ -73,7 +73,7 @@ const ManageAllOrders = () => {
                                     <th>Name</th>
                                     <th>Order Status</th>
                                     <th>Status Button</th>
-                                    <th>Cancel Order</th>
+                                    <th>Deleted Order</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -85,7 +85,7 @@ const ManageAllOrders = () => {
                                             <td>{displayName}</td>
                                             <td>{allorders.status}</td>
                                             <td><Button variant="info" onClick={() => handleUpdate(allorders._id)} className="btn">Approve</Button></td>
-                                            <td><Button variant="warning" onClick={() => handleDelete(allorders._id)} className="btn">Delete Product</Button></td>
+                                            <td><Button variant="warning" onClick={() => handleDelete(allorders._id)} className="btn">Delete Order</Button></td>
                                         </tr>
                                     )
                                 })}
